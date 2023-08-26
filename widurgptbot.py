@@ -4,14 +4,11 @@ from llama_index.llms import OpenAI
 import openai
 from llama_index import SimpleDirectoryReader
 
-st.set_page_config(page_title="Chat with Widur", page_icon="🦙", layout="centered", initial_sidebar_state="auto", menu_items=None)
+st.set_page_config(page_title="Chat with Widur", page_icon="🧙‍♂️", layout="centered", initial_sidebar_state="auto", menu_items=None)
 openai.api_key = st.secrets.openai_key
-st.title("Niyat aur Niti hamesha sahi honi chahiye")
-st.session_state.clear()
-#st.info("Check out the full tutorial to build this app in our [blog post](https://blog.streamlit.io/build-a-chatbot-with-custom-data-sources-powered-by-llamaindex/)", icon="📃")
-#st.session_state.messages = [{"role": "assistant", "content": "Tell me your thought@"}]
-#st.session_state.messages = []
-print("1")
+st.title("Vidur Niti")
+#st.session_state.clear()
+
 if "messages" not in st.session_state.keys(): # Initialize the chat message history
     st.session_state.messages = [
         {"role": "assistant", "content": "Tell me what are you thinking about 🧙‍♂️"}
