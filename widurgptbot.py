@@ -16,7 +16,7 @@ if "messages" not in st.session_state.keys(): # Initialize the chat message hist
 
 st.cache_resource(show_spinner=False)
 def load_data():
-    with st.spinner(text="Loading and indexing the Streamlit docs – hang tight! This should take 1-2 minutes."):
+    with st.spinner(text="Loading and indexing Vidur Niti – hang tight! This should take 1-2 minutes."):
         reader = SimpleDirectoryReader(input_dir="./data", recursive=True)
         docs = reader.load_data()
         service_context = ServiceContext.from_defaults(llm=OpenAI(model="text-davinci-003", temperature=0.5, maxchunksize = 300, system_prompt="You are most wise person who always gives the right advise no matter the situation"))
