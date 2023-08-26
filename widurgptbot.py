@@ -19,7 +19,7 @@ def load_data():
     with st.spinner(text="Loading and indexing Vidur Niti – hang tight! This should take 1-2 minutes."):
         reader = SimpleDirectoryReader(input_dir="./data", recursive=True)
         docs = reader.load_data()
-        service_context = ServiceContext.from_defaults(llm=OpenAI(model="text-davinci-003", temperature=0.5, maxchunksize = 300, system_prompt="You are most wise person who always gives the right advise no matter the situation"))
+        service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo", temperature=0.5, maxchunksize = 300, system_prompt="You are most wise person who always gives the right advise no matter the situation"))
         index = VectorStoreIndex.from_documents(docs, service_context=service_context)
         return index
 
