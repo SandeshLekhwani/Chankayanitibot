@@ -5,7 +5,7 @@ import openai
 from llama_index import SimpleDirectoryReader
 
 st.set_page_config(page_title="Chat with Widur", page_icon="🦙", layout="centered", initial_sidebar_state="auto", menu_items=None)
-openai.api_key = "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"
+openai.api_key = st.secrets.openai_key
 st.title("Niyat aur Niti hamesha sahi honi chahiye")
 st.session_state.clear()
 #st.info("Check out the full tutorial to build this app in our [blog post](https://blog.streamlit.io/build-a-chatbot-with-custom-data-sources-powered-by-llamaindex/)", icon="📃")
